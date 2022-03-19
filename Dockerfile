@@ -1,6 +1,6 @@
 FROM python:3.8-slim
 
-RUN apt install apt-utils \ apt-get update -q \
+RUN apt-get update -q \
   && apt-get install --no-install-recommends -qy \
     inetutils-ping \
   && rm -rf /var/lib/apt/lists/*
