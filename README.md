@@ -1,16 +1,13 @@
 # DashMachine
 ### Another web application bookmark dashboard, with fun features.
-![Subreddit subscribers](https://img.shields.io/reddit/subreddit-subscribers/dashmachine?style=social)
 
-![GitHub last commit](https://img.shields.io/github/last-commit/rmountjoy92/dashmachine)
-![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/rmountjoy/dashmachine)
+![GitHub last commit](https://img.shields.io/github/last-commit/neerazz/dashmachine)
+![GitHub Repo stars](https://img.shields.io/github/stars/neerazz/dashmachine?style=social)
+![GitHub repo size](https://img.shields.io/github/repo-size/neerazz/dashmachine)
+![Lines of code](https://img.shields.io/tokei/lines/github/neerazz/dashmachine)
 
-![Docker Pulls](https://img.shields.io/docker/pulls/rmountjoy/dashmachine)
-![GitHub Repo stars](https://img.shields.io/github/stars/rmountjoy92/dashmachine?style=social)
-
-![GitHub repo size](https://img.shields.io/github/repo-size/rmountjoy92/dashmachine)
-![Docker Image Size (tag)](https://img.shields.io/docker/image-size/rmountjoy/dashmachine/latest?label=Docker%20Image%20Size)
-![Lines of code](https://img.shields.io/tokei/lines/github/rmountjoy92/dashmachine)
+![Docker Pulls](https://img.shields.io/docker/pulls/nirazz/dashmachine)
+![Docker Image Size (tag)](https://img.shields.io/docker/image-size/nirazz/dashmachine/latest)
 
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
 [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
@@ -39,7 +36,7 @@ docker create \
   -p 5000:5000 \
   -v path/to/data:/dashmachine/dashmachine/user_data \
   --restart unless-stopped \
-  rmountjoy/dashmachine:latest
+  nirazz/dashmachine:latest
 ```
 To run in a subfolder, use a CONTEXT_PATH environment variable. For example, to run at localhost:5000/dash:
 ```
@@ -49,16 +46,15 @@ docker create \
   -e CONTEXT_PATH=/dash
   -v path/to/data:/dashmachine/dashmachine/user_data \
   --restart unless-stopped \
-  rmountjoy/dashmachine:latest
+  nirazz/dashmachine:latest
 ```
-### Synology
-Check out this awesome guide: https://nashosted.com/manage-your-self-hosted-applications-using-dashmachine/
+
 ### Python
 Instructions are for linux.
 ```
 virtualenv --python=python3 DashMachineEnv
 cd DashMachineEnv && source bin/activate
-git clone https://github.com/rmountjoy92/DashMachine.git
+git clone https://github.com/neerazz/DashMachine.git
 cd DashMachine && pip install -r requirements.txt
 python3 run.py
 ```
@@ -79,12 +75,6 @@ The user data folder is located at DashMachine/dashmachine/user_data. This is wh
 ### Note
 If you change the config.ini file, you either have to restart the container (or python script) or click the 'save' button in the config section of settings for the config to be applied. Pictures added to the backgrounds/icons folders are available immediately.
 
-## Want to contribute?
-Please use the pull request template at:
-https://github.com/rmountjoy92/DashMachine/blob/master/pull_request_template.md
-
-See this link for how to create a pull request:
-https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request
 
 ## Tech used
 * Flask (Python 3)
