@@ -5,6 +5,14 @@ RUN apt-get update -q \
     inetutils-ping \
   && rm -rf /var/lib/apt/lists/*
 
+RUN rm /bin/sh && ln -s /bin/bash /bin/sh
+
+RUN apt-get update \
+&& apt-get install libjpeg-dev zlib1g-dev -y \
+&& apt-get install gcc git -y \
+&& apt-get install libffi-dev \
+&& apt-get clean
+
 COPY [ "requirements.txt", "/dashmachine/" ]
 
 WORKDIR /dashmachine
